@@ -1,0 +1,137 @@
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+box-sizing: border-box;
+
+}
+
+.app{
+    background : linear-gradient(135deg, #153677, #4e085f);
+    width: 100%;
+    min-height: 100vh;
+    padding:10px;
+    position: relative;
+
+}
+
+.quiz-app{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    
+}
+
+.quiz-app > h2{
+    justify-content: center;
+    color: #002765;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+ 
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;    
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn:hover{
+    background-color: #222;
+    color: #ffffff;
+
+}
+
+#next-btn{
+    background-color: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Styling for the footer link and heart */
+.su {
+    position: absolute;  /* Fix it at the bottom */
+    bottom: 50px;        /* Keep it 10px from the bottom */
+    width: 98%;         /* Full width of the page */
+    display: flex;       /* Use flex to center the content */
+    justify-content: center;  /* Center horizontally */
+    text-align: center;  /* Ensure text is centered */
+}
+
+.custom-link {
+    color: white; /* Text color */
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Remove underline */
+}
+
+.custom-link .heart {
+    color: red; /* Heart color */
+}
+
+.custom-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+  
+
+
+/* Responsive design for mobile screens */
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: center; /* Center content in the column */
+        padding: 0;
+    }
+
+    input {
+        margin: 10px; /* Space between input and button */
+        text-align: center;
+    }
+
+    button {
+        width: 100%; /* Set button width to fit its content */
+        padding: 16px 50px; /* Adjust button padding */ 
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .su {
+         
+        bottom: 80px;        /* Keep it 10px from the bottom */
+        
+    }
+    
+}

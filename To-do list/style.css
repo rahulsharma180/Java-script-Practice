@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;  /* Horizontal scroll ko remove karega */
+     }
+    
+    
+    .app{
+        background : linear-gradient(135deg, #153677, #4e085f);
+        width: 100%;
+        padding-top:20px;
+        padding-bottom:20px;
+        min-height: 100vh;
+       
+
+        position: relative;
+        
+       
+    
+    }
+    
+    .todo-app{
+        width: 100%;
+        max-width: 540px;
+        background: white;
+        margin: 100px auto 30px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+        
+    }
+    
+    .todo-app h2{
+        justify-content: center;
+        color: #002765;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:  40px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    
+    }
+    
+    .todo-app h2 img{
+        width: 50px;
+        margin-left: 10px;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #edeef0;
+        border-radius: 20px;
+        padding-left: 20px;
+        margin-bottom: 25px;    
+    }
+    
+    input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+    }
+    button{
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+        background-color: #ff5945;
+        color:white;
+        font-size: 16px;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+     
+     
+    ul li{
+        font-size: 17px ;
+        font-family:Arial, Helvetica, sans-serif;
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;    
+        position: relative;
+    }
+    
+    ul li::before {
+        content: '';
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(images/unchecked.png);
+        background-size: cover;
+        background-position: center ;
+        top: 8px;
+        left: 8px;
+    
+    }
+    
+    ul li.checked{
+            color: #555;
+            text-decoration: line-through;
+    }
+    
+    ul li.checked::before{
+        background-image: url(images/checked.png);
+    
+    }
+    
+    ul li span{
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    
+    ul li span:hover{
+      background-color: #edeef0;
+     
+    }
+    
+    /* Styling for the footer link and heart */
+    .su {
+        position: absolute;  
+        bottom: 10px; /* Adjust this for proper spacing */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        text-align: center;  
+        width: 100%;
+    }
+    
+    
+    .custom-link {
+        color: white; /* Text color */
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none; /* Remove underline */
+       
+       
+    }
+    
+    .custom-link .heart {
+        color: red; /* Heart color */
+    }
+    
+    .custom-link:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+      
+    
+    
+    /* Responsive design for mobile screens */
+    @media (max-width: 576px) {
+        .app{
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+        
+        .row {
+            flex-direction: column; /* Stack input and button vertically */
+            align-items: center; /* Center content in the column */
+            padding: 0;
+        }
+
+        .todo-app h2{
+            font-size: 30px;
+
+        }
+    
+        input {
+            margin: 10px; /* Space between input and button */
+            text-align: center;
+        }
+    
+        button {
+            width: 100%; /* Set button width to fit its content */
+            padding: 16px 50px; /* Adjust button padding */ 
+            border-radius: 0px 0px 10px 10px;
+        }
+    
+        .su {
+            position: absolute;  /* Fix it at the bottom */
+            bottom: 10px;        /* Keep it 10px from the bottom */
+            /* border: 1px solid red; */
+            padding: 0px;
+                   
+                        
+        }
+        
+        .custom-link{
+            text-align: center;
+            /* border: 1px solid red; */
+        }
+        .todo-app{
+            margin-top: 50px;
+        }
+    }
+ 
